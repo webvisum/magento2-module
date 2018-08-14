@@ -28,7 +28,7 @@ define(
             initObservable: function () {
                 this._super()
                     .observe({
-                        isPhoneVisible: false,
+                        isPhoneVisible: quote.billingAddress().telephone == '',
                         isDobSet: customer.customerData.dob == null
                     });
                 return this;
